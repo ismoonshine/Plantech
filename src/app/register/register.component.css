@@ -1,0 +1,43 @@
+h2{
+    text-align: center;
+    color: black;
+    background-color: rgb(145, 202, 156);
+    padding: 0% auto;
+
+}
+h2:hover{
+    color: rgb(48, 48, 48);
+}
+.container{
+    background-color: whitesmoke;
+    padding: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+form{
+    height: 25rem;
+    width: 20rem;
+    border: 1px solid whitesmoke ;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+div{
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    flex: 0;
+    justify-content:space-around;
+
+}
+button{
+    color: green;
+    border-color: green;
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+}
