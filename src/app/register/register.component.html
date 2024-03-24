@@ -93,20 +93,7 @@
             setSuccess(password)
         }
 
-        if(cpasswordVal === ''){
-            success = false;
-            setError(cpassword,'Confirm password is required')
-        }
-        else if(cpasswordVal!==passwordVal){
-            success = false;
-            setError(cpassword,'Password does not match')
-        }
-        else{
-            setSuccess(cpassword)
-        }
-
         return success;
-
     }
 
     const validateEmail = (email) => {
