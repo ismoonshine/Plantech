@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -10,6 +9,7 @@ export class UserService {
 private apiUrl = 'http://localhost/api/prop';
 
 constructor(private http: HttpClient) { }
+
 
 getUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
