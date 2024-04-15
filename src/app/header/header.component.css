@@ -4,28 +4,23 @@ header{
     border-bottom: 1px solid #deb1b1;
 }
 a{
-    color: blueviolet;
+    color: rgb(159, 100, 18);
 }
 a:hover{
-    background: blueviolet;
+    background: rgb(113, 75, 43);
     color: whitesmoke;
 }
 
 .container{
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
 
 }
-a.logo{
-    font-weight: bold;
-    padding: 1em;
-}
-nav ul{
-    list-style-type: none;
+a{
+    list-style-type:none;
     margin: 0;
 }
-nav ul li a {
+nav a {
     padding: 1em;
     display: inline-block;
 }

@@ -1,28 +1,67 @@
-<div class="container">
-    <form action="" method="post" id="form">
-        <h2 class="text-center">Registration</h2>
-        <div class="input-group">
-            <label for="name">Nom et Prenom :  </label><br>
-            <input type="text" name="name" id="name" placeholder="Nom et Prénom" required>
-        </div><br>
-        <div class="input-group">
-            <label for="CIN">CIN :  </label><br>
-            <input type="text" name="CIN" id="CIN" placeholder="01234567" minlength="8" maxlength="8" required >
-        </div><br>
-        <div class="input-group">
-            <label for="num_tel">Numero de telephone :   </label><br>
-            <input type="text" name="num_tel" id="num_tel" placeholder="01234567" minlength="8" maxlength="8" required>
-        </div><br>
-        <div class="input-group">
-            <label for="email">Email :  </label><br>
-            <input type="email" name="email" id="email" placeholder="exemple@exp.com" required>
-        </div><br>
-        <div class="input-group">
-            <label for="password">Mot de passe :  </label><br>
-            <input type="password" id="mdp" name="password" placeholder="*********" required>
-        </div><br>
-        <button class=" btn btn-submit" type="submit" onclick="">Enregistrer</button>
-    </form>
+<body>
+    <section class="hero" style="background-color: #F4F9F3;">
+        <div >
+            <div class="row">
+                <div  > <h2 style="text-align: center;">Commencez maintenant</h2>
+            </div>
+            <br><br><br>
+            <form class="login-form">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="name">Nom et Prenom :  </label><br>
+                        <input type="text" name="name" id="name" placeholder="Nom et Prénom" required  style="background-color: #C5F4C1;">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="CIN" >CIN :  </label><br>
+            <input type="text" name="CIN" id="CIN" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;" >
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="num_tel">Numero de telephone :   </label><br>
+            <input type="text" name="num_tel" id="num_tel" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;">
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="email" >Email :  </label><br>
+            <input type="email" name="email" id="email" placeholder="exemple@exp.com" required style="background-color: #C5F4C1;">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="password" >Mot de passe :  </label><br>
+            <input type="password" id="mdp" name="password" placeholder="*********" required style="background-color: #C5F4C1;">
+                    </div>
+                </div>
+                <div class="col-4">
+                
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree">
+                    <label for="agree">J'accepte les <a href="#">conditins&politique</a></label>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+            <div class="container d-grid" >
+                            
+                <button type="button" class="btn btn-success btn-block">S'inscrire</button>
+            </div> </div>  </div><br><br>
+
+</form>
+</div></div>
+<br><br><br>
+<p class="signup-link" style="text-align: center;">Vous n'avez pas de compte? <a href="#">S'inscrire</a></p>
 
     <script>
     const form = document.querySelector('#form')
@@ -103,4 +142,3 @@
         );
 };
     </script>
-</div>
