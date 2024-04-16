@@ -11,7 +11,7 @@ import { Session } from 'inspector';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit{
-  url:String= "http://localhost/"
+  url:String= "http://localhost/index.php"
   //link service to componant 
   constructor(private us: UserService) {}
   onSubmit(formData: any): void {
@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit{
         }
       );
     }
-  /*private validateInputs(formData: any): boolean {
+  private validateInputs(formData: any): void {
     const nameVal: string = formData.name.trim();
     const emailVal: string = formData.email.trim();
     const passwordVal: string = formData.password.trim();
@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit{
   }
   id_user:number=1;
   sessions:any[]=[];
-*/
+
   ngOnInit(): void {
   }
   }

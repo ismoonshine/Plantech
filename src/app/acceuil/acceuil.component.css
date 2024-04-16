@@ -7,14 +7,14 @@ body, html {
 .container {
     width: 100%;
     height: 100%;
-    background-image: url('./main-slider-1-1\ 1.png');
+    background-image: url('main-slider-1-1 1.png');
     background-size: cover; /* Ajuste l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image */
     /* Vous pouvez également utiliser d'autres propriétés comme background-repeat pour contrôler le comportement de l'image en arrière-plan */
 }
 .custom-button {
     background-color: #f7c35f;; /* Couleur de fond grise */
-    color: white; /* Couleur de texte jaune */
+    color: green; /* Couleur de texte jaune */
     padding: 20px 40px; /* Ajoute un peu d'espace autour du texte */
     border: none; /* Supprime la bordure du bouton */
     border-radius: 5px; /* Ajoute des coins arrondis au bouton */
@@ -25,6 +25,6 @@ body, html {
     font-size: 24px; /* Taille du texte agrandie pour le paragraphe */
 }
 .custom-heading {
-    color: white; /* Couleur du texte en blanc */
+    color: green; /* Couleur du texte en blanc */
     font-size: 56px; /* Taille du texte agrandie pour l'en-tête */
 }
