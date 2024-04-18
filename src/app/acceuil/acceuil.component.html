@@ -3,6 +3,13 @@
     <br><br><br><br><br><br>
     <p class="custom-paragraph">Bienvenue chez Plantech : Votre passerelle vers des <br>opportunites illimitees</p><br><br><br><br><br><br>
     <h1  class="custom-heading">PLANTECH</h1><br><br><br><br><br><br>
-    <button routerLink="/authentification" id="registrationButton" type="button" class="custom-button" >inscrivez-vous ici</button>
+    
+<button id="registrationbutton" type="button" class="custom-button" onclick="navigateToRegister()">Inscrivez-vous ici</button>
+
+<script>
+    function navigateToRegister() {
+    window.location.href = "/register";
+    }
+</script>
 </div>
 </body>
