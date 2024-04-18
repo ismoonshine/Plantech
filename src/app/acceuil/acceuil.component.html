@@ -1,18 +1,8 @@
 <body>
 <div class="container">
     <br><br><br><br><br><br>
-    <p style="color: green;" class="custom-paragraph">Bienvenue chez Plantech : Votre passerelle vers des <br>opportunités illimitées</p><br><br><br><br><br><br>
-    <h1 style="color: green;" class="custom-heading">PLANTECH</h1><br><br><br><br><br><br>
-    <button id="registrationButton" type="button" class="custom-button" >inscrivez-vous ici</button>
+    <p class="custom-paragraph">Bienvenue chez Plantech : Votre passerelle vers des <br>opportunites illimitees</p><br><br><br><br><br><br>
+    <h1  class="custom-heading">PLANTECH</h1><br><br><br><br><br><br>
+    <button routerLink="/authentification" id="registrationButton" type="button" class="custom-button" >inscrivez-vous ici</button>
 </div>
-<script>
-    // Get the button
-    var registrationButton = document.getElementById("registrationButton");
-
-    // Add click event listener to the button
-    registrationButton.addEventListener("click", function() {
-        // Redirect to the registration page
-        window.location.href = "authentification.component.html"; // Change "register.html" to the URL of your registration page
-    });
-</script>
 </body>

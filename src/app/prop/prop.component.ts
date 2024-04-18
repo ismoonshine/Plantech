@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-prop',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './prop.component.html',
   styleUrl: './prop.component.css'
 })
-export class PropComponent {
-
+export class PropComponent implements OnInit{
+  ngOnInit(): void {
+  }
 }

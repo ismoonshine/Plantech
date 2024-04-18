@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-authentification',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './authentification.component.html',
   styleUrl: './authentification.component.css'
 })
-export class AuthentificationComponent {
+export class AuthentificationComponent implements OnInit {
 
+  ngOnInit(): void {
+      
+  }
 }

@@ -13,8 +13,8 @@ body, html {
     /* Vous pouvez également utiliser d'autres propriétés comme background-repeat pour contrôler le comportement de l'image en arrière-plan */
 }
 .custom-button {
-    background-color: #f7c35f;; /* Couleur de fond grise */
-    color: green; /* Couleur de texte jaune */
+    background-color: #b56328;; /* Couleur de fond grise */
+    color: whitesmoke; /* Couleur de texte jaune */
     padding: 20px 40px; /* Ajoute un peu d'espace autour du texte */
     border: none; /* Supprime la bordure du bouton */
     border-radius: 5px; /* Ajoute des coins arrondis au bouton */
@@ -25,6 +25,6 @@ body, html {
     font-size: 24px; /* Taille du texte agrandie pour le paragraphe */
 }
 .custom-heading {
-    color: green; /* Couleur du texte en blanc */
+    color: whitesmoke; /* Couleur du texte en blanc */
     font-size: 56px; /* Taille du texte agrandie pour l'en-tête */
 }

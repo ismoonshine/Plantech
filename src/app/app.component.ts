@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,

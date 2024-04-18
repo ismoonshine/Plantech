@@ -11,7 +11,7 @@ import { Session } from 'inspector';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit{
-  url:String= "http://localhost/index.php"
+  url:String= "http://localhost/Plantech/prop.php"
   //link service to componant 
   constructor(private us: UserService) {}
   onSubmit(formData: any): void {
@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit{
           // Optionally, you can show an error message to the user
         }
       );
+      
     }
   private validateInputs(formData: any): void {
     const nameVal: string = formData.name.trim();
