@@ -28,7 +28,6 @@ export class RegisterComponent implements OnInit{
           // Optionally, you can show an error message to the user
         }
       );
-      
     }
   private validateInputs(formData: any): void {
     const nameVal: string = formData.name.trim();
@@ -41,5 +40,6 @@ export class RegisterComponent implements OnInit{
   sessions:any[]=[];
 
   ngOnInit(): void {
+
   }
   }
