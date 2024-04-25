@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 providedIn: 'root'
 })
 export class UserService {
-private apiUrl = 'http://localhost/api/prop';
+private apiUrl = 'http://localhost/Plantech/prop.php';
 
 constructor(private http: HttpClient) { }
 
