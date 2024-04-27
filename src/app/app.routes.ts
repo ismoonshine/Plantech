@@ -4,16 +4,13 @@ import { RegisterComponent } from './register/register.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
+import { RoutingModule } from './routing/routing.module';
 
 export const routes: Routes = [
     // Define the route for the authentification component
-    { path: 'authentification', component: AuthentificationComponent},
-    {path : 'register', component: RegisterComponent},
+    //{ path: 'register', loadChildren: ()=> import('./routing/routing.module').then(r=>r.RoutingModule)},
+    {path:'register', loadComponent:()=>import('./register/register.component').then(c=>c.RegisterComponent)},
     {path: 'profile', component: ProfileComponent},
-    
-
-
-    // Add more routes as needed
 ];
 @NgModule({
     imports: [CommonModule, RouterModule.forRoot(routes,{enableTracing: true})],

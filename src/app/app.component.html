@@ -1,4 +1,2 @@
 <app-header></app-header>
-<router-outlet>
-    <app-acceuil></app-acceuil>
-</router-outlet>
+<ng-container *ngIf="!isLoggingOut"></ng-container>
