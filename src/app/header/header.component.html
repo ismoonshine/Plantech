@@ -1,12 +1,13 @@
 <header>
     <div class="container">
         <img src="" alt="">
-        <a class="nav-link" routerLink="/acceuil" class="Acceuil">Acceuil</a>
+        <a class="nav-link" href="/acceuil" routerLink="/acceuil" routerLinkActive="active"  class="Acceuil">Acceuil</a>
         <nav >
-                <a routerLink="/profil" class="Profil">Profil</a>
-                <a routerLink="">Terrain</a>
-                <a routerLink="/">Info</a>
+                <a href="/profile" routerLink="/profil" routerLinkActive="active" class="Profil">Profil</a>
+                <a href="/terrain" routerLink="">Terrain</a>
+                <a href="/acceuil" routerLink="/">Info</a>
                 <a  routerLink="/">Contacter nous!</a>
         </nav>
     </div>
+    <router-outlet></router-outlet>
 </header>

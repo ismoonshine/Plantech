@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Terrain } from './terrain';
+import { Terrain } from '../terrain';
 
 @Injectable({
   providedIn: 'root'
