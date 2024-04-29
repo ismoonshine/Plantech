@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { RoutingModule } from './routing/routing.module';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { Terrain } from './terrain';
+import { AjouterterrainComponent } from './ajouterterrain/ajouterterrain.component';
 
 export const routes: Routes = [
     //{ path: 'register', loadChildren: ()=> import('./routing/routing.module').then(r=>r.RoutingModule)},
@@ -14,6 +16,7 @@ export const routes: Routes = [
     {path: 'authentification', component:AuthentificationComponent},
     {path: '', component:AcceuilComponent},
     {path: 'acceuil', component:AcceuilComponent},
+    {path:'ajout', component: AjouterterrainComponent}
     
 ];
 @NgModule({
