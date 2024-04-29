@@ -10,19 +10,19 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for="name">Nom et Prenom :  </label><br>
-                        <input type="text" name="name" id="name" placeholder="Nom et Prénom" required  style="background-color: #C5F4C1;">
+                        <input type="text" name="name" id="name" placeholder="Nom et Prénom" required  style="background-color: #C5F4C1;" [(ngModel)]="u.name">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
                         <label for="CIN" >CIN :  </label><br>
-            <input type="text" name="CIN" id="CIN" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;" >
+            <input type="text" name="CIN" id="CIN" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;" [(ngModel)]="u.CIN">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
                         <label for="num_tel">Numero de telephone :   </label><br>
-            <input type="text" name="num_tel" id="num_tel" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;">
+            <input type="text" name="num_tel" id="num_tel" placeholder="01234567" minlength="8" maxlength="8" required style="background-color: #C5F4C1;" [(ngModel)]="u.num_tel">
                     </div>
                 </div>
             </div>
@@ -31,13 +31,13 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for="email" >Email :  </label><br>
-            <input type="email" name="email" id="email" placeholder="exemple@exp.com" required style="background-color: #C5F4C1;">
+            <input type="email" name="email" id="email" placeholder="exemple@exp.com" required style="background-color: #C5F4C1;" [(ngModel)]="u.email">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
-                        <label for="password" >Mot de passe :  </label><br>
-            <input type="password" id="mdp" name="password" placeholder="*********" required style="background-color: #C5F4C1;">
+                        <label for="mdp" >Mot de passe :  </label><br>
+            <input type="mdp" id="mdp" name="mdp" placeholder="*********" required style="background-color: #C5F4C1;" [(ngModel)]="u.mdp">
                     </div>
                 </div>
                 <div class="col-4">
@@ -54,89 +54,10 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
             <div class="container d-grid" >
-                <button type="button" class="btn btn-success btn-block" >S'inscrire</button>
+                <button type="button" class="btn btn-success btn-block" (click)="ajouteruser()">S'inscrire</button>
             </div> </div>  </div><br><br>
 </form>
 </div></div>
 <br><br><br>
 <p class="signup-link" style="text-align: center;">Vous avez un compte? <a href="/authentification" routerLink="/authentification" routerLinkActive="active">Se connecter</a></p>
 
-    <script>
-    const form = document.querySelector('#form')
-    const name = document.querySelector(' name');
-    const email = document.querySelector('#email');
-    const password = document.querySelector('#password');
-    const CIN = document.querySelector('#CIN');
-    const numTel=document.querySelector('#num_tel') ;
-
-    form.addEventListener('submit',(e)=>{
-        
-        if(!validateInputs()){
-            e.preventDefault();
-        }
-    })
-    function validateInputs(){
-        const nameVal = name.value.trim()
-        const emailVal = email.value.trim();
-        const passwordVal = password.value.trim();
-        const numTelVal = numTel.value.trim();
-        const CINVal= CIN.value.trim();
-
-        let success = true
-
-        if(nameVal===''){
-            success=false;
-            setError (name,'Username is required')
-        }
-        else{
-            setSuccess (name)
-        }
-        if(isNaN(CINVal)){
-            success=false;
-            setError(CIN,'Invalid CIN Number')
-        }
-        else {
-            setSuccess(CIN);
-        }
-        if(isNaN(numTelVal)){
-            success=false;
-            setError(numTel,'Invalid Phone Number')
-        }
-        else {
-            setSuccess(numTel);
-        }        
-        if(emailVal===''){
-            success = false;
-            setError(email,'Email is required')
-        }
-        else if(!validateEmail(emailVal)){
-            success = false;
-            setError(email,'Please enter a valid email')
-        }
-        else{
-            setSuccess(email)
-        }
-
-        if(passwordVal === ''){
-            success= false;
-            setError(password,'Password is required')
-        }
-        else if(passwordVal.length<8){
-            success = false;
-            setError(password,'Password must be atleast 8 characters long')
-        }
-        else{
-            setSuccess(password)
-        }
-
-        return success;
-    }
-
-    const validateEmail = (email) => {
-        return String(email)
-        .toLowerCase()
-        .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-};
-    </script>

@@ -2,19 +2,37 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
     </head>
     
-       
 
 <body style="background-color: #f4f9f3;">
 
     <div class="container">
         <div class="row">
             <div class="col-3"><app-prop></app-prop></div>
-            <div class="col-3 offset-5">
-          
-                
-                
-            
-        </div> 
-        
-    </div></div>
+            <div class="col-9">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Code Terrain</th>
+                            <th>Nom Terrain</th>
+                            <th>Localisation</th>
+                            <th>Dimention</th>
+                            <th>Disponibilité</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let terrain of terrains">
+                            <td>{{ terrain.CodeTerrain }}</td>
+                            <td>{{ terrain.NomTerrain }}</td>
+                            <td>{{ terrain.Localisation }}</td>
+                            <td>{{ terrain.Dimention }}</td>
+                            <td>{{ terrain.Disponibilite }}</td>
+                            <td>{{ terrain.Prix }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 </body>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { User } from '../../../user';
 
 @Injectable({
 providedIn: 'root'
@@ -10,18 +11,21 @@ private apiUrl = 'http://localhost/Plantech/prop.php';
 
 constructor(private http: HttpClient) { }
 
+ajouteruser(u:User) 
+{
+    return this.http.post(this.apiUrl, u);
 
-getUsers(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
 }
-
-addUser(user: { 
-    id_utilisateur:number, 
-    name: string, 
-    CIN:number, 
-    email: string, 
-    mdp:string, 
-    num_tel:number }): Observable<any> {
-    return this.http.post<any>(this.apiUrl, user);
+supprimerterrain(CodeTerrain:number) 
+{
+    return this.http.delete(this.apiUrl+"?CodeTerrain="+CodeTerrain);
+}
+modifierterrain(u:User)
+{
+    return this.http.put(this.apiUrl, u);
+}
+getAllTerrains()
+{
+    return this.http.get("http://localhost/Plantch/prop.php");
 }
 }

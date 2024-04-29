@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes } from '@angular/router';
+import { RouterLink, Routes } from '@angular/router';
 import { AcceuilComponent } from '../acceuil/acceuil.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { RouterOutlet } from '@angular/router';
@@ -14,7 +14,7 @@ export const routes: Routes =[
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
