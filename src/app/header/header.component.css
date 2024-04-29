@@ -1,13 +1,13 @@
 header{
     background-color: whitesmoke;
     padding: 0;
-    border-bottom: 1px solid #deb1b1;
+    border-bottom: 1px solid #c2e7ac;
 }
 a{
-    color: rgb(159, 100, 18);
+    color: rgb(125, 199, 138);
 }
 a:hover{
-    background: rgb(113, 75, 43);
+    background: rgb(125, 199, 138);
     color: whitesmoke;
 }
 

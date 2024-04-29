@@ -16,7 +16,7 @@ export const routes: Routes = [
     {path: 'authentification', component:AuthentificationComponent},
     {path: '', component:AcceuilComponent},
     {path: 'acceuil', component:AcceuilComponent},
-    {path:'ajout', component: AjouterterrainComponent}
+    {path:'terrain', component: AjouterterrainComponent}
     
 ];
 @NgModule({
