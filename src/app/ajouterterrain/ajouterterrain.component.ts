@@ -1,43 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { TerrainService } from '../register/services/user/terrain.service';
 import { Terrain } from '../terrain';
-import { NgModel } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'; // Removed NgModel, FormsModule, HttpClientModule, NgIf imports
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-ajouterterrain',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, NgIf],
+  imports: [ReactiveFormsModule, NgIf ],
   templateUrl: './ajouterterrain.component.html',
   styleUrl: './ajouterterrain.component.css'
 })
-export class AjouterterrainComponent implements OnInit{
-  constructor(public  terrainService : TerrainService) {}
-  errors:string="";
+export class AjouterterrainComponent implements OnInit {
+  terrainForm!: FormGroup;
+  errors: string = '';
+  t: Terrain = {}; // Corrected type declaration for 't'
   
-  t:Terrain= new  Terrain();
-ajouterterrain(){
-  this.errors = "";
-    if(this.t.NomTerrain==null || this.t.Prix== null)
-      {
-        this.errors = "Veuillez saisir  tous les champs.";
-      }
-      else 
-      this.terrainService.ajouterterrain(this.t).subscribe(
-    {
-      next:(response:any)=> {
-        let msg=response.msg;
+  constructor(private formBuilder: FormBuilder, private terrainService: TerrainService) { } // Inject TerrainService
+  ngOnInit(): void {
+    this.terrainForm = this.formBuilder.group({
+      NomTerrain: ['', Validators.required],
+      Localisation: ['', Validators.required],
+      Dimention: ['', [Validators.required]],
+      Prix: ['', Validators.required],
+      Disponibilite: [false, Validators.required]
+    });
+  }
+
+  ajouterterrain(): void {
+    console.log(1);
+    console.log(this.terrainForm.value.NomTerrain); // Logging form values
+    this.errors = '';
+    if (this.terrainForm.invalid) {
+      this.errors = 'Veuillez saisir tous les champs.';
+      return; // Exit function if form is invalid
+    }
+    this.terrainService.ajouterterrain(this.terrainForm.value).subscribe(
+      (response: any) => {
+        let msg = response.msg;
         alert(msg);
       },
-      error:(error)=> {console.log("Error",error)}
-    })
-
-
-}
-
-  ngOnInit(): void {
+      (error: any) => {
+        console.log('Error', error);
+      }
+    );
   }
-  
 }

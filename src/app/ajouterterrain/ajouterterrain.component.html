@@ -1,54 +1,58 @@
 <body>
-
-    <div *ngIf="errors!=''">
+    <div *ngIf="errors">
         {{errors}}
     </div>
     <section class="hero" style="background-color: #F4F9F3;">
         <div >
             <div class="row">
-                <div  > <h2 style="text-align: center;">Ajouter votre terrain</h2>
+                <div><h2 style="text-align: center;">Ajouter votre terrain</h2></div>
             </div>
             <br><br><br>
-            <form class="login-form">
-            <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="NomTerrain">Nom Terrain : </label><br>
-                        <input  type="text" name="NomTerrain" id="NomTerrain" placeholder="Nom de votre terrain" required  style="background-color: #C5F4C1;" [(ngModel)]="t.NomTerrain">
+            <form [formGroup]="terrainForm" >
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="NomTerrain">Nom Terrain :</label><br>
+                            <input type="text" id="NomTerrain" formControlName="NomTerrain" placeholder="Nom de votre terrain" style="background-color: #C5F4C1;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="Localisation">Localisation :</label><br>
+                            <input type="text" id="Localisation" formControlName="Localisation" placeholder="Inserer les coordonnees" style="background-color: #C5F4C1;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="Dimention">Dimention :</label><br>
+                            <input type="text" id="Dimention" formControlName="Dimention" placeholder="00x00" minlength="8" maxlength="8" style="background-color: #C5F4C1;">
+                        </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="CIN" >Localisation :</label><br>
-            <input type="text" name="CIN" id="Localisation" placeholder="Inserer les coordonnees" required style="background-color: #C5F4C1;"  [(ngModel)]="t.Localisation">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="Prix">Prix :</label><br>
+                            <input type="text" id="Prix" formControlName="Prix" style="background-color: #C5F4C1;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="Disponibilite">Disponibilite :</label><br>
+                            <input type="checkbox" id="Disponibilite" formControlName="Disponibilite" style="background-color: #C5F4C1;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="container d-grid">
+                            <button type="submit" class="btn btn-success" value="Ajouter un Terrain" (click)="ajouterterrain()" >Ajouter Terrain</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="Dimention">Dimention :  </label><br>
-            <input type="text" name="Dimention" id="Dimention" placeholder="00x00" minlength="8" maxlength="8" required style="background-color: #C5F4C1;" [(ngModel)]="t.Dimention">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="Prix" >Prix:  </label><br>
-            <input type="Prix" name="Prix" id="Prix" required style="background-color: #C5F4C1;" [(ngModel)]="t.Prix">
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for="Disponibilite" >Disponibilite :</label>
-            <input type=checkbox id="Disponibilite" name="Disponibilite"  required style="background-color: #C5F4C1;" [(ngModel)]="t.Disponibilite">
-                    </div>
-                </div>
-                <div class="col-4">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-            <div class="container d-grid" >
-                <button type="button" class="btn btn-success" (click)="ajouterterrain()" >Ajouter un Terrain</button>
-            </div></div>  </div><br><br>
-</form>
+            </form>
+        </div>
+    </section>
+</body>
